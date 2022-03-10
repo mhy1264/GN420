@@ -1,4 +1,4 @@
-def add():
+def add(): 
     a="123"
     b="456"
     a+=b
@@ -51,6 +51,33 @@ def toLowerCase():
     alpha=alpha.toLower()
     print(alpha)
 
+def review():
+    birth=input("birth")
+    birth=birth.replace('-','/')
+    nid=input("nid")
+    nid.upper()
+    sid=input("sid")
+    sid=sid[1:-1]
+    name=input("name")
+    name.upper()
+    nameLen=len(name)
+
+    print(birth)
+    print(nid)
+    print(sid)
+    print(name)
+    print(nameLen)
+
+def review2():
+    str="&&&&&123&&45&&&&67&788"
+    print(len(str))
+    listStr=str.split("&")
+    print(listStr)
+    newStr='-'.join(listStr)
+    print(newStr)
+    newStr=newStr.replace('-','@')
+    print(newStr)
+
 if __name__ == '__main__':
     # add()
     # exchange()
@@ -60,4 +87,6 @@ if __name__ == '__main__':
     # getSplit()
     # testJoin()
     # testReplacement()
-    ToLowerCase()
+    # ToLowerCase()
+    # review()
+    # review2()
