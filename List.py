@@ -88,13 +88,13 @@ def listReview1():
 def listReview2():
     artStr='k,n,o,w,l,e,d,g,e,i,s,o,n,e,t,h,i,n,g,v,i,r,t,u,e,i,s,a,n,o,t,h,e,r,g,o,o,d,s,e,n,s,e'
     artList=artStr.split(',')
+    print(artList)
     print(artList.count("e"))
 
     name =input("Name ")
-    for i in name :
-        artList.insert(-1,i)
+    artList.extend(name)
     print(artList)
-
+    
     print("removing 1-9\n")
     for i in range(1,10):
         artList.remove(artList[i])
@@ -172,9 +172,9 @@ if __name__ == "__main__":
     # append()
     # testList ()
     # listReview1 ()
-    # listReview2()
+    listReview2()
     # testAppendAndExpand()
     # insertList()
     # delete ()
     # sort()
-    practiceSort()
+    # practiceSort()
