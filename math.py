@@ -49,4 +49,4 @@ if __name__ == '__main__':
     # log10()
     # power()
     # toBD()
-    # calculateSin()
+    calculateSin()

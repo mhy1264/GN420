@@ -1,8 +1,8 @@
 def iterator():
     str="123456,7890"
     str=str.split(',')
-    for i in range(0,len(str)):
-        print(str[i])
+    for i in str:
+        print(i)
 
 def nested():
     a=['a',1243,1213.123,['A']]
@@ -18,11 +18,6 @@ def usingIndex():
 def usingIn():
     score=[60,59,100,12,30]
     print (60 in score)
-
-def end():
-    a=[1,2,3]
-    b=[4,5,6]
-    print(a.extend(b))
     
 def testList ():
     List = ['a', 'b', 'c', 'd']
@@ -40,7 +35,6 @@ def testAppend ():
     print("appending...\n")
     List1.append(List2)
     print(List1)
-
 def testExtend ():
     List1=[1,2,3,4,5]
     List2=[6,7,8,9,10]
@@ -172,8 +166,8 @@ if __name__ == "__main__":
     # append()
     # testList ()
     # listReview1 ()
-    listReview2()
-    # testAppendAndExpand()
+    # listReview2()
+    testAppendAndExpand()
     # insertList()
     # delete ()
     # sort()

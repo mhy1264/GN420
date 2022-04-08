@@ -89,4 +89,4 @@ if __name__ == '__main__':
     # testReplacement()
     # ToLowerCase()
     # review()
-    # review2()
+    review2()
