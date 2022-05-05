@@ -1,3 +1,6 @@
+import re
+
+
 def myFun():
     print("this is my first function")
     
@@ -29,7 +32,7 @@ def practice (x):
 
 def fib(x:int):
     fibList=list()
-    fibList.append(1)
+    fibList.append(0)
     fibList.append(1)
 
     for i in range (1,x+1):
@@ -94,6 +97,18 @@ def Prime():
                 else:
                     num.append(i)
     print(num)
+
+def bmi(h,w):
+    index = w/((h/100)**2)
+    print(index)
+    if (index <18.5):
+        return "過輕"
+    elif (index>=18.5 and index<24):
+        return "剛好"
+    else:
+        return "過重"
+
+
 if __name__=='__main__':
     #myFun()
     #two(1,2)
@@ -108,11 +123,12 @@ if __name__=='__main__':
     #print( practice([1,2,3,4,5,6,7,8,9,10]))
     #print( practice([1,2]))
 
-    #for i in range(10):
-     #   fib(i)
+    # for i in range(10):
+    #     fib(i)
     #var()
     #print (temp)
     #practiceWhile()
     #while2()
-    Prime()
+    #Prime()
+    print( bmi(170,64))
 
