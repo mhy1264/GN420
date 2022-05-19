@@ -1,4 +1,5 @@
 import os
+import atm
 def read():
     myFile=open('read_File\\text.txt','r')
     # print("File name",myFile.name)
@@ -80,14 +81,80 @@ def practice2():
         if(op==4):
             break
 
+def practice3():
+    print(os.getcwd())
+    os.chdir("read_File")
 
+    f=open("db.txt",'r')  
+    buffer= f.readlines()
+    f.close()
+    temp =list()
+    for i in range(0,len(buffer)):
+        temp.append(buffer[i][0:-1].split(','))
 
+    op=0
+    while(op!= 5):
+        op = int(input())
+        if(op==1):
+            info=input().split(' ') # user 端輸入帳號米馬
+            id = 0
+            status = False
+            for i in range(0,len(temp)):
+                if (temp[i][0]==info[0] and temp[i][1]==info[1]):
+                    status = True
+                    id = i
 
+            if(status):
+                des = int(input())
+                temp[id][2]=int(temp[id][2])+des
+            else:
+                print("Wring Accounts or Password")
+
+        if(op==2):
+            info=input().split(' ') # user 端輸入帳號米馬
+            id = 0
+            status = False
+            for i in range(0,len(temp)):
+                if (temp[i][0]==info[0] and temp[i][1]==info[1]):
+                    status = True
+                    id = i
+
+            if(status):
+                withdraw = int(input())
+                temp[id][2]=int(temp[id][2])-withdraw
+            else:
+                print("Wring Accounts or Password")
+        
+        if(op==3):
+            info=input().split(' ') # user 端輸入帳號米馬
+            id = 0
+            status = False
+            for i in range(0,len(temp)):
+                if (temp[i][0]==info[0] and temp[i][1]==info[1]):
+                    status = True
+                    id = i
+
+            if(status):
+                print("Remaining Bills ",temp[id][2])
+            else:
+                print("Wring Accounts or Password")
+        
+        if(op==4):
+            info=input().split(' ') # user 端輸入帳號米馬
+            info.append(0)
+
+            temp.append(info)
+    
+        f=open("db.txt",'w')
+        for i in range(0,len(temp)):
+            print("{},{},{}".format(temp[i][0],temp[i][1],temp[i][2]),file=f)
+        f.close()
 
 if __name__=='__main__':
     # print("read in main")
     # read()
     # write()
     # practice()
-    practice2()
+    # practice2()
+    practice3()
 
